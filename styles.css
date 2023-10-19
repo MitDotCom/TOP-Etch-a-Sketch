@@ -1,4 +1,8 @@
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: antiquewhite;
 }
 
@@ -8,9 +12,22 @@ h1 {
 }
 
 #eas-frame {
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./img/red-plastic-bg.jpg');
+    border: 5px solid red;
+    border-radius: 10px;
+}
+
+#eas-grid {
     height: 500px;
     width: 500px;
-    display: flex;
-    background-image: url('./img/red-plastic-bg.jpg');
-    justify-content: center;
+    background-color: white;
+}
+#controls {
+    display: flex;    
 }
