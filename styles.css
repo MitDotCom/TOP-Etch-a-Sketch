@@ -29,5 +29,6 @@ h1 {
     background-color: white;
 }
 #controls {
+    margin-top: 20px;
     display: flex;    
 }
