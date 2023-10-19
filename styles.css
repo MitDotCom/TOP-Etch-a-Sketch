@@ -1,0 +1,13 @@
+body {
+    background-color: antiquewhite;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#eas-frame {
+    display: flex;
+    justify-content: center;
+}
