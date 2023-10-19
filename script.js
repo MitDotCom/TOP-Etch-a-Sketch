@@ -9,7 +9,7 @@ easGrid.appendChild(gridRows);
 for (let i = 0; i <= 16; i++) {
     
     let column = document.createElement('div');
-    column.classList.add(`${i}`);
+    column.classList.add(`column${i}`);
     gridRows.appendChild(column);
 };
 
