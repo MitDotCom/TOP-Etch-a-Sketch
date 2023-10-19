@@ -15,14 +15,15 @@ for (let i = 0; i < 16; i++) {
 };
 
 // for loop to create cells in each gridRows row
-for (let i = 0; i <= 16; i++) {
+for (let i = 0; i < 16; i++) {
 
     let currentColumn = document.querySelector(`.column${i}`);
 
-    for (let i = 0; i <= 16; i++) {
+    for (let i = 0; i < 16; i++) {
 
         let cell = document.createElement('div');
         cell.classList.add(`cell${i}`);
+        console.log(cell);
         currentColumn.appendChild(cell);
     }
 
