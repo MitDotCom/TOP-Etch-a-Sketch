@@ -8,6 +8,9 @@ h1 {
 }
 
 #eas-frame {
+    height: 500px;
+    width: 500px;
     display: flex;
+    background-image: url('./img/red-plastic-bg.jpg');
     justify-content: center;
 }
