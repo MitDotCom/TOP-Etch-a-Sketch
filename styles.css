@@ -50,5 +50,6 @@ h1 {
 }
 
 #controls {
+    margin-top: 20px;
     display: flex;
 }
