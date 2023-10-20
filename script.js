@@ -40,5 +40,7 @@ gridSquares.forEach(square => {
 const resetButton = document.getElementById('reset');
 
 resetButton.addEventListener('click', () => {
-    document.querySelector('.cell').style.backgroundColor = 'white';
+    gridSquares.forEach(square => {
+        square.style.backgroundColor = 'white';
+    })
 })
