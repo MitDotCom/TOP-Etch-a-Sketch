@@ -31,11 +31,14 @@ for (let i = 0; i < 16; i++) {
 const gridNodes = document.getElementsByClassName('cell');
 const gridSquares = Array.from(gridNodes);
 
-console.log(typeof gridSquares, gridSquares.length);
-
 gridSquares.forEach(square => {
     square.addEventListener('mouseover', (square) => {
-        console.log(square);
         square.target.style.backgroundColor = 'red';
     })
 });
+
+const resetButton = document.getElementById('reset');
+
+resetButton.addEventListener('click', () => {
+    document.querySelector('.cell').style.backgroundColor = 'white';
+})
