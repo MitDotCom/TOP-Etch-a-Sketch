@@ -22,8 +22,20 @@ for (let i = 0; i < 16; i++) {
     for (let i = 0; i < 16; i++) {
 
         let cell = document.createElement('div');
+        cell.classList.add('cell');
         cell.classList.add(`cell${i}`);
         currentColumn.appendChild(cell);
     }
 
 };
+const gridNodes = document.getElementsByClassName('cell');
+const gridSquares = Array.from(gridNodes);
+
+console.log(typeof gridSquares, gridSquares.length);
+
+gridSquares.forEach(square => {
+    square.addEventListener('mouseover', (square) => {
+        console.log(square);
+        square.target.style.backgroundColor = 'red';
+    })
+});
