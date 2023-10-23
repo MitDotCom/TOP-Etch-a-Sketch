@@ -1,5 +1,5 @@
 // Variables
-const resetButton = document.getElementById('reset');
+const reset = document.getElementById('reset');
 const magic = document.getElementById('magic');
 const screen = document.getElementById('screen');
 // Etch-a-sketch grid
@@ -42,7 +42,7 @@ gridSquares.forEach(square => {
     })
 });
 
-resetButton.addEventListener('click', () => {
+reset.addEventListener('click', () => {
     gridSquares.forEach(square => {
         square.style.backgroundColor = 'white';
     })
@@ -51,4 +51,12 @@ resetButton.addEventListener('click', () => {
         easFrame.classList.remove('shake');
     }, 500)
     
+});
+
+magic.addEventListener('click', function () {
+
+});
+
+screen.addEventListener('click', function() {
+
 });
