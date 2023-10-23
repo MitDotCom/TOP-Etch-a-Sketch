@@ -7,34 +7,30 @@ body {
 }
 
 #eas-frame {
-    height: 700px;
-    width: 600px;
+    background-image: url("./img/Etch-a-Sketch.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 670px;
+    width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-image: url('./img/red-plastic-bg.jpg');
     border: 5px solid red;
     border-radius: 10px;
 }
 
 .heading {
+    margin-top: 20px;
     display: flex;
     gap: 20px;
     align-items: center;
 }
 
-.heading span{
-
-}
-
-.heading {
-
-}
-
 #eas-grid {
-    height: 500px;
-    width: 500px;
+    margin-bottom: 40px;
+    height: 440px;
+    width: 600px;
     background-color: white;
     border: 2px solid rgb(150, 0, 0);
     border-radius: 2px;
@@ -49,7 +45,7 @@ body {
 }
 
 .gridRows div {
-    height: 500px;
+    height: 440px;
     display: flex;
     flex-direction: column;
     flex: auto;
@@ -57,7 +53,7 @@ body {
 }
 
 #controls {
-    margin-top: 20px;
+    margin: 20px;
     display: flex;
 }
 

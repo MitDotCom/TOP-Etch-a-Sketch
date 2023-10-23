@@ -7,7 +7,7 @@ gridRows.classList.add("gridRows");
 easGrid.appendChild(gridRows);
 
 // for loop to create gridRows
-for (let i = 0; i < 16; i++) {
+for (let i = 0; i < 22; i++) {
     
     let column = document.createElement('div');
     column.classList.add(`column${i}`);
