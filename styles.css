@@ -1,3 +1,8 @@
+@font-face {
+    font-family: FortrackItalic-5zBj;
+    src: url(./FortrackItalic-5zBj.otf);
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -7,10 +12,10 @@ body {
 }
 
 #eas-frame {
-    background-image: url("./img/Etch-a-Sketch.jpg");
+    background-image: url("./img/Etch-A-Sketch.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 670px;
+    background-size: contain;
+    height: 656px;
     width: 800px;
     display: flex;
     flex-direction: column;
@@ -58,6 +63,8 @@ body {
 h1 {
     color: #f5db88;
     text-shadow: 2px 2px 2px gray;
+    font-family: FortrackItalic-5zBj;
+    font-style: italic;
 }
 
 #eas-grid {
