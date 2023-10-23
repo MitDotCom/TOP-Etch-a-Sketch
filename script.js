@@ -1,12 +1,11 @@
-
-
 // Variables
 const resetButton = document.getElementById('reset');
+const magic = document.getElementById('magic');
+const screen = document.getElementById('screen');
 // Etch-a-sketch grid
 const easFrame = document.getElementById('eas-frame');
 const easGrid = document.getElementById('eas-grid');
 const gridRows = document.createElement('div');
-
 
 gridRows.classList.add("gridRows");
 easGrid.appendChild(gridRows);
@@ -39,7 +38,7 @@ const gridSquares = Array.from(gridNodes);
 
 gridSquares.forEach(square => {
     square.addEventListener('mouseover', (square) => {
-        square.target.style.backgroundColor = 'black';
+        square.target.style.backgroundColor = "black";
     })
 });
 
@@ -52,4 +51,4 @@ resetButton.addEventListener('click', () => {
         easFrame.classList.remove('shake');
     }, 500)
     
-})
+});
