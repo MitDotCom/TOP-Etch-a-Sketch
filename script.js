@@ -1,6 +1,13 @@
+// Buttons
+const magic = document.querySelector('.magic');
+const screen = document.querySelector('.screen');
+const resetButton = document.getElementById('reset');
+
 // Etch-a-sketch grid
-easFrame = document.getElementById('eas-frame');
-easGrid = document.getElementById('eas-grid');
+const easFrame = document.getElementById('eas-frame');
+const easGrid = document.getElementById('eas-grid');
+const gridNodes = document.getElementsByClassName('cell');
+const gridSquares = Array.from(gridNodes);
 
 const gridRows = document.createElement('div');
 gridRows.classList.add("gridRows");
@@ -28,16 +35,12 @@ for (let i = 0; i < 22; i++) {
     }
 
 };
-const gridNodes = document.getElementsByClassName('cell');
-const gridSquares = Array.from(gridNodes);
 
 gridSquares.forEach(square => {
     square.addEventListener('mouseover', (square) => {
         square.target.style.backgroundColor = 'black';
     })
 });
-
-const resetButton = document.getElementById('reset');
 
 resetButton.addEventListener('click', () => {
     gridSquares.forEach(square => {
