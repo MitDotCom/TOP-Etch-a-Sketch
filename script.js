@@ -33,7 +33,7 @@ const gridSquares = Array.from(gridNodes);
 
 gridSquares.forEach(square => {
     square.addEventListener('mouseover', (square) => {
-        square.target.style.backgroundColor = 'red';
+        square.target.style.backgroundColor = 'black';
     })
 });
 
