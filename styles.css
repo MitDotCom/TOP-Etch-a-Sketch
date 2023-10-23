@@ -27,6 +27,11 @@ body {
     align-items: center;
 }
 
+h1 {
+    color: #f5db88;
+    text-shadow: 2px 2px 2px gray;
+}
+
 #eas-grid {
     margin-bottom: 40px;
     height: 440px;
