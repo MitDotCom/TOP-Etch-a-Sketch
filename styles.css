@@ -6,21 +6,30 @@ body {
     background-color: antiquewhite;
 }
 
-h1 {
-    display: flex;
-    justify-content: center;
-}
-
 #eas-frame {
-    height: 600px;
+    height: 700px;
     width: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     background-image: url('./img/red-plastic-bg.jpg');
     border: 5px solid red;
     border-radius: 10px;
+}
+
+.heading {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.heading span{
+
+}
+
+.heading {
+
 }
 
 #eas-grid {
