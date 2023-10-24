@@ -16,12 +16,14 @@ function createGrid () {
     while (gridRows.firstChild) {
         gridRows.removeChild(gridRows.lastChild);
       }
+      let columnWidth = String(600/coordinate + "px");
 // for loop to create gridRows---HORIZONTAL
     for (let i = 0; i < coordinate; i++) {
         
         let column = document.createElement('div');
+        column.classList.add('column');
         column.classList.add(`column${i}`);
-        column.offsetWidth = coordinate/440;
+        column.style.width = columnWidth;
         gridRows.appendChild(column);
     };
 
@@ -30,11 +32,14 @@ function createGrid () {
 
         let currentColumn = document.querySelector(`.column${i}`);
 
-        for (let i = 0; i < coordinate * 0.66; i++) {
+        for (let i = 0; i < coordinate; i++) {
 
+            let cellHeight = String(440/coordinate + "px");
             let cell = document.createElement('div');
             cell.classList.add('cell');
             cell.classList.add(`cell${i}`);
+            cell.style.height = cellHeight;
+            cell.style.width = columnWidth;
             currentColumn.appendChild(cell);
 
         }
@@ -43,6 +48,7 @@ function createGrid () {
     
     let gridCells = document.getElementsByClassName('cell');
     let gridSquares = Array.from(gridCells);
+    console.log(gridSquares);
 
     gridSquares.forEach(square => {
         square.addEventListener('mouseover', function (square) {

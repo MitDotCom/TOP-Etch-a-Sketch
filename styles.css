@@ -95,7 +95,6 @@ h1 {
 }
 
 .gridRows {
-    display: flex;
     height: 440px;
     width: 600px;
     display: flex;
@@ -103,12 +102,7 @@ h1 {
     color: grey;
 }
 
-.gridRows div {
-    display: flex;
-    flex-direction: column;
-    height: 440px;
-    width: 30px;
-}
+
 .footer {
     width: 700px;
     background-color: white;
