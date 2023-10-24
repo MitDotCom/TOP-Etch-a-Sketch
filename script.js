@@ -4,6 +4,7 @@ const magic = document.getElementById('magic');
 const screen = document.getElementById('screen');
 
 let coordinate = 20;
+let squareColor = "rgb(0,0,0)";
 
 // Etch-a-sketch grid
 const easFrame = document.getElementById('eas-frame');
@@ -48,12 +49,11 @@ function createGrid () {
     
     let gridCells = document.getElementsByClassName('cell');
     let gridSquares = Array.from(gridCells);
-    console.log(gridSquares);
 
     gridSquares.forEach(square => {
         square.addEventListener('mouseover', function (square) {
             square.stopImmediatePropagation();
-            square.target.style.backgroundColor = "black";
+            square.target.style.backgroundColor = squareColor;
         });
     });
     return [gridSquares,gridCells];
@@ -73,13 +73,13 @@ reset.addEventListener('click', () => {
 });
 
 magic.addEventListener('click', function () {
-    
+    squareColor = String("rgb(" + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) + "," + Math.floor(Math.random() * 255) +")");
 });
 
 screen.addEventListener('click', function() {
     coordinate = parseInt(prompt("How many pixels per side would you like the drawing surface?"));
     while (coordinate <= 0 || coordinate > 100) {
-        coordinate = parseInt(prompt("Hint: the number must be greater than 0 and less than 100. How many pixels per side would you like the drawing surface?"));
+        coordinate = parseInt(prompt("Hint: the number must be greater than 0 and no more than 100. How many pixels per side would you like the drawing surface?"));
     }
     [gridSquares,gridCells] = createGrid();
 });
