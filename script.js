@@ -9,47 +9,51 @@ let coordinate = 20;
 const easFrame = document.getElementById('eas-frame');
 const easGrid = document.getElementById('eas-grid');
 const gridRows = document.createElement('div');
-
 gridRows.classList.add("gridRows");
 easGrid.appendChild(gridRows);
 
 function createGrid () {
-
-// for loop to create gridRows
+    while (gridRows.firstChild) {
+        gridRows.removeChild(gridRows.lastChild);
+      }
+// for loop to create gridRows---HORIZONTAL
     for (let i = 0; i < coordinate; i++) {
         
         let column = document.createElement('div');
         column.classList.add(`column${i}`);
+        column.offsetWidth = coordinate/440;
         gridRows.appendChild(column);
     };
 
-// for loop to create cells in each gridRows row
+// for loop to create cells in each gridRows row---VERTICAL
     for (let i = 0; i < coordinate; i++) {
 
         let currentColumn = document.querySelector(`.column${i}`);
 
-        for (let i = 0; i < coordinate * 0.666; i++) {
+        for (let i = 0; i < coordinate * 0.66; i++) {
 
             let cell = document.createElement('div');
             cell.classList.add('cell');
             cell.classList.add(`cell${i}`);
             currentColumn.appendChild(cell);
+
         }
 
     };
-
-let gridNodes = document.getElementsByClassName('cell');
-let gridSquares = Array.from(gridNodes);
+    
+    let gridCells = document.getElementsByClassName('cell');
+    let gridSquares = Array.from(gridCells);
 
     gridSquares.forEach(square => {
-        square.addEventListener('mouseover', (square) => {
+        square.addEventListener('mouseover', function (square) {
+            square.stopImmediatePropagation();
             square.target.style.backgroundColor = "black";
-        })
+        });
     });
-    return [gridSquares,gridNodes];
+    return [gridSquares,gridCells];
 };
 
-[gridSquares,gridNodes] = createGrid();
+[gridSquares,gridCells] = createGrid();
 
 reset.addEventListener('click', () => {
     gridSquares.forEach(square => {
@@ -71,6 +75,5 @@ screen.addEventListener('click', function() {
     while (coordinate <= 0 || coordinate > 100) {
         coordinate = parseInt(prompt("Hint: the number must be greater than 0 and less than 100. How many pixels per side would you like the drawing surface?"));
     }
-    console.log("coordinate: ",coordinate,"typeof: ",typeof coordinate);
-    [gridSquares,gridNodes] = createGrid();
+    [gridSquares,gridCells] = createGrid();
 });

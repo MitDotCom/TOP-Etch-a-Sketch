@@ -95,10 +95,11 @@ h1 {
 }
 
 .gridRows {
+    display: flex;
     height: 440px;
+    width: 600px;
     display: flex;
     flex: auto;
-    justify-content: flex-start;
     color: grey;
 }
 
