@@ -2,6 +2,7 @@
 const reset = document.getElementById('reset');
 const magic = document.getElementById('magic');
 const screen = document.getElementById('screen');
+const hiddenp = document.getElementById('hiddenp');
 
 let coordinate = 20;
 let squareColor = "rgb(0,0,0)";
@@ -83,3 +84,7 @@ screen.addEventListener('click', function() {
     }
     [gridSquares,gridCells] = createGrid();
 });
+
+setTimeout(function () {
+    hiddenp.style.visibility = "visible";
+},10000);

@@ -102,7 +102,9 @@ h1 {
     color: grey;
 }
 
-
+#hiddenp {
+    visibility: hidden;
+}
 .footer {
     width: 700px;
     background-color: white;
