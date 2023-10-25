@@ -1,7 +1,7 @@
 # TOP-Etch-a-Sketch
 The Etch-a-Sketch project from The Odin Project 
 
-The link for this site can be found at: https://github.com/MitDotCom/TOP-Etch-a-Sketch.git
+The link for this site can be found at: https://github.com/MitDotCom/TOP-Etch-a-Sketch
 
 10-19-23 I want this Etch-a-Sketch to have multiple color choices, brush sizes (by pixel), and maybe I can try to do a "shake" animation to reset the Etch-a-Sketch.
 
